@@ -31,8 +31,7 @@ class Searchemployee(View):
     def get(self,request):
          query=request.GET['q']
          print(query)
-         b=Employee.objects.filter(Q(emp__id__icontains=query) |
-                                   Q(emp_name__icontains=query) |
+         b=Employee.objects.filter(Q(emp_name__icontains=query) |
                                    Q(email__icontains=query) |
                                   Q(phone_number__icontains=query) |
                                  Q(designation__icontains=query)  |
