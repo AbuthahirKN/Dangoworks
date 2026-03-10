@@ -20,10 +20,10 @@ from employee import views
 app_name='employee'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
     path('',views.Home.as_view(),name='home'),
     path('addemployee',views.Addemployee.as_view(),name='addemployee'),
     path('view',views.Viewemployee.as_view(),name='view'),
-    path('search',views.Searchemployee.as_valid(),name='search'),
+    path('search',views.Searchemployee.as_view(),name='search'),
 
 ]

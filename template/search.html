@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 {%block content %}
 <div class="container mt-3 p-5 w-70 text-center border border - 2">
-<h2>EMPLOYESS</h2>
-
+<h2>Employee</h2>
     <table class="table table-bordered">
         <tr>
             <th>Employ id</th>
             <th>Name</th>
             <th>Email</th>
-            <th>phonenumber</th>
+            <th> Phone number</th>
             <th>Designation </th>
             <th>Images</th>
             <th>Actions</th>
@@ -21,12 +20,9 @@
             <td>{{i.phone_number}}</td>
             <td>{{i.designation}}</td>
              <td>{{i.salary}}</td>
-            <td><img src="{{i.image.url}} " height="100"></td>
+            <td><img src="{{i.images.url}} " height="100"></td>
 
         </tr>
-
-
-
 
 {% endfor %}
     </table>

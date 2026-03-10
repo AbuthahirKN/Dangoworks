@@ -20,7 +20,6 @@ from employee import views
 app_name='company'
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('', include('employee.urls')),
 ]
 from django.conf.urls.static import static
