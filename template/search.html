@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{%block content %}
+<div class="container mt-3 p-5 w-70 text-center border border - 2">
+<h2>EMPLOYESS</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Employ id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>phonenumber</th>
+            <th>Designation </th>
+            <th>Images</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            {%for i in employee %}
+            <td>{{i.emp_id }}</td>
+            <td>{{i.emp_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone_number}}</td>
+            <td>{{i.designation}}</td>
+             <td>{{i.salary}}</td>
+            <td><img src="{{i.image.url}} " height="100"></td>
+
+        </tr>
+
+
+
+
+{% endfor %}
+    </table>
+
+
+</div>
+
+{% endblock %}
